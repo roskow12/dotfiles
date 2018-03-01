@@ -1,0 +1,50 @@
+[
+    { "keys": ["ctrl+alt+left"], "command": "jump_back" },
+    { "keys": ["ctrl+alt+right"], "command": "jump_forward" },
+    { "button": ["button4"], "command": "jump_back" },
+    { "button": ["button5"], "command": "jump_forward" },
+    { "keys": ["ctrl+tab"], "command": "next_view" },
+    { "keys": ["ctrl+shift+tab"], "command": "prev_view" },
+    { "keys": ["ctrl+shift+`"], "command": "toggle_side_bar" },
+    { "keys": ["super+alt+d"], "command": "file_diff_menu" , "args": {"cmd": ["opendiff", "$file1", "$file2"] }},
+    { "keys": ["super+alt+c"], "command": "git_gutter_compare_head"},
+    { "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace"},
+
+    // overlay
+    { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false},
+        "context":
+        [
+            {"key": "overlay_visible", "operator": "equal", "operand":true}
+        ]
+    },
+    { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true},
+        "context":
+        [
+            {"key": "overlay_visible", "operator": "equal", "operand":true}
+        ]
+    },
+    { "keys": ["ctrl+["], "command": "hide_overlay", "context":
+        [
+            {"key": "overlay_visible", "operator": "equal", "operand":true}
+        ]
+    },
+    // autocomplete
+    { "keys": ["ctrl+k"], "command": "move", "args": {"by": "lines", "forward": false},
+        "context":
+        [
+            {"key": "auto_complete_visible", "operator": "equal", "operand":true}
+        ]
+    },
+    { "keys": ["ctrl+j"], "command": "move", "args": {"by": "lines", "forward": true},
+        "context":
+        [
+            {"key": "auto_complete_visible", "operator": "equal", "operand":true}
+        ]
+    },
+    { "keys": ["ctrl+["], "command": "exit_insert_mode_and_hide_auto_complete", "context":
+        [
+            { "key": "auto_complete_visible", "operator": "equal", "operand": true }
+        ]
+    }
+]
+
