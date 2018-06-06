@@ -6,9 +6,10 @@
 	"installed_packages":
 	[
 		"CMake",
+		"EasyClangComplete",
 		"GitGutter",
 		"LiveReload",
-		"Markdown Preview",
+		"MarkdownPreview",
 		"Package Control",
 		"Six",
 		"SublimeLinter-cppcheck"
