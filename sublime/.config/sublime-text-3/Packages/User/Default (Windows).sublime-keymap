@@ -41,10 +41,16 @@
             {"key": "auto_complete_visible", "operator": "equal", "operand":true}
         ]
     },
-    { "keys": ["ctrl+["], "command": "exit_insert_mode_and_hide_auto_complete", "context":
-        [
-            { "key": "auto_complete_visible", "operator": "equal", "operand": true }
-        ]
-    }
+    // { "keys": ["ctrl+["], "command": "exit_insert_mode_and_hide_auto_complete", "context":
+    //     [
+    //         { "key": "auto_complete_visible", "operator": "equal", "operand": true }
+    //     ]
+    // }
+
+    // tmux pane commands 
+    { "keys": ["ctrl+a", "l"], "command": "focus_neighboring_group" },
+    { "keys": ["ctrl+a", "h"], "command": "focus_neighboring_group", "args": {"forward": false} },
+    { "keys": ["ctrl+a", "{"], "command": "move_to_neighboring_group" },
+    { "keys": ["ctrl+a", "}"], "command": "move_to_neighboring_group", "args": {"forward": false} },
 ]
 
