@@ -144,11 +144,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 # Media volume controls
 
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute" bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute" 
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec --no-startup-id amixer -q -D pulse sset Master toggle; exec --no-startup-id notify-send 'Mute/Unmute'
 
 #this isn't working
-bindysm $sup+l exec i3lock --color=ffffff
+bindysm Mod4+l exec i3lock --color=ffffff
 
 #bindsym $mod+y fullscreen disable; floating enable; resize set 640 480; sticky enable; move window to position 1270 590
 bindsym $mod+y fullscreen disable; floating enable; sticky enable; 
