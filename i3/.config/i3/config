@@ -192,3 +192,6 @@ bar {
         status_command i3status
 }
 
+
+exec xautolock -time 15 -locker "~/bin/lock" -notify 30 -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" 
+exec_always notify-send "i3 config reloaded" 
